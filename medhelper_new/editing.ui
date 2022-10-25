@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Editing</class>
+ <widget class="QDialog" name="Editing">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1099</width>
+    <height>751</height>
+   </rect>
+  </property>
+  <property name="sizeIncrement">
+   <size>
+    <width>0</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="tabletTracking">
+   <bool>false</bool>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <widget class="QTableView" name="tableView2">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>30</y>
+     <width>651</width>
+     <height>681</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="picLabel2">
+   <property name="geometry">
+    <rect>
+     <x>700</x>
+     <y>40</y>
+     <width>361</width>
+     <height>271</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="download_photo">
+   <property name="geometry">
+    <rect>
+     <x>690</x>
+     <y>550</y>
+     <width>171</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Загрузить фото лекарства</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="extra_functions">
+   <property name="geometry">
+    <rect>
+     <x>770</x>
+     <y>660</y>
+     <width>211</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Расширенный функционал</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_err_4">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>670</x>
+     <y>330</y>
+     <width>421</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;Добавление нового лекарства&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_err_5">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>700</x>
+     <y>380</y>
+     <width>171</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Название лекарства:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_err_6">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>700</x>
+     <y>430</y>
+     <width>191</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Описание:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_err_7">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>700</x>
+     <y>480</y>
+     <width>191</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Побочные эффекты:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="add_cure">
+   <property name="geometry">
+    <rect>
+     <x>890</x>
+     <y>550</y>
+     <width>161</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Добавить лекарство</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="name_cure">
+   <property name="geometry">
+    <rect>
+     <x>840</x>
+     <y>390</y>
+     <width>241</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="description_cure">
+   <property name="geometry">
+    <rect>
+     <x>840</x>
+     <y>440</y>
+     <width>241</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="effects_cure">
+   <property name="geometry">
+    <rect>
+     <x>840</x>
+     <y>490</y>
+     <width>241</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="save_cure">
+   <property name="geometry">
+    <rect>
+     <x>890</x>
+     <y>600</y>
+     <width>161</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Обновить записи</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="delete_cure">
+   <property name="geometry">
+    <rect>
+     <x>690</x>
+     <y>600</y>
+     <width>171</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Удалить выбранную запись</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1101</width>
+     <height>751</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <zorder>label_2</zorder>
+  <zorder>tableView2</zorder>
+  <zorder>picLabel2</zorder>
+  <zorder>download_photo</zorder>
+  <zorder>extra_functions</zorder>
+  <zorder>label_err_4</zorder>
+  <zorder>label_err_5</zorder>
+  <zorder>label_err_6</zorder>
+  <zorder>label_err_7</zorder>
+  <zorder>add_cure</zorder>
+  <zorder>name_cure</zorder>
+  <zorder>description_cure</zorder>
+  <zorder>effects_cure</zorder>
+  <zorder>save_cure</zorder>
+  <zorder>delete_cure</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

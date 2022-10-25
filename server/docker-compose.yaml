@@ -1,0 +1,49 @@
+version: '3'
+
+services:
+  sqlite3: #Имя сервиса
+#    container_name: mospoly_database #Имя с которым запустится контейнер
+#    hostname: database #Имя "хоста" которым будет считать себя контейнер
+    stdin_open: true
+    tty: true
+    image: keinos/sqlite3 #Образ из которого запускается контейнер   
+#    volumes: #Подключаемые директории
+#      - /home/server/workspace:/usr/bin/sqlite3 #Директории вида хост_директория:директория_контейнера
+#    environment: #переменные окружения
+#      - POSTGRES_DB=mospolydb, mospolydb_dev
+#      - POSTGRES_USER=mospolyuser
+#      - POSTGRES_PASSWORD=averyStrongPassword
+#    ports: # Сопоставление портов хост-машины и контейнера    
+#      - 54321:5432
+#    restart: unless-stopped #условие для рестарта в случае остановки контейнера
+
+
+#  mospoly_api:
+#    container_name: mospoly_api
+#    hostname: mospoly_api
+#    build: # Параметры для сборки приложения
+#      context: ./mospoly_api # Каталог, используемый для сборки
+#      dockerfile: Dockerfile # Файл, используемый для сборки образа приложения
+#    ports:
+#     - 54322:5000
+#    volumes:
+#     - ./mospoly_api/src/:/usr/src/app/
+#      - /usr/src/app/node_modules
+#    restart: unless-stopped
+#    environment:
+#      NODE_ENV: ${MOSPOLY_ENVIRONMENT}
+#    depends_on: # Указание на зависимость сервиса от другого сервиса
+ #     - mospoly_database
+  server:
+    container_name: server
+    hostname: server
+    build:
+      context: /home/server
+      dockerfile: Dockerfile
+    ports:
+      - 33333:33333
+#      volumes:
+#        - ./server:/home/server
+    restart: always
+    depends_on:
+      - sqlite3
