@@ -5,8 +5,8 @@ RUN apt install cmake -y
 RUN apt-get install qt5-default -y
 RUN apt install build-essential -y
 COPY . /home/server
-WORKDIR /home/server
-RUN qmake server.pro
+WORKDIR /home/server/untitled9
+RUN qmake untitled9.pro
 RUN make
 RUN make install
-CMD ["./server"]
+CMD ["./untitled9"]
