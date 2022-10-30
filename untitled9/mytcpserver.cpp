@@ -25,10 +25,10 @@ MyTcpServer::MyTcpServer(QObject *parent) : QObject(parent){
 // а если открылся выводим сообщение "server is started"
 // и присваиваем переменной  server_status значение 1
     if(!mTcpServer->listen(QHostAddress::Any, 33333)){
-        qDebug() << "server is not started";
+        qDebug() << "server is not run";
     } else {
         server_status=1;
-        qDebug() << "server is started";
+        qDebug() << "server is run";
     }
 }
 
