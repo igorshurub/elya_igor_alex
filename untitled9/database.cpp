@@ -15,7 +15,7 @@ void DataBase::openDataBase()
      * и имени базы данных, если она существует
      * */
     db = QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName("/home/server/"  DATABASE_NAME);
+    db.setDatabaseName("/home/server/untitled9/"  DATABASE_NAME);
     if (db.open()) {qDebug()<<"database is open";} else {qDebug()<<"database not open";}
 }
 
