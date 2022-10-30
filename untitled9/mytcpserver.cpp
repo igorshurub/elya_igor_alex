@@ -96,5 +96,5 @@ void MyTcpServer::slotClientDisconnected(){
     int id =(int)clientSocket->socketDescriptor();
     clientSocket->close();
     SClients.remove(id);
-    qDebug() <<QString::fromUtf8("Client is disconnected \n");
+    qDebug() <<QString::fromUtf8("Client is closed \n");
 }
