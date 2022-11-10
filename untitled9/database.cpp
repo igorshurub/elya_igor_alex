@@ -16,7 +16,7 @@ void DataBase::openDataBase()
      * */
     db = QSqlDatabase::addDatabase("QSQLITE");
     db.setDatabaseName("/home/server/"  DATABASE_NAME);
-    if (db.open()) {qDebug()<<"db is open";} else {qDebug()<<"db not open";}
+    if (db.open()) {qDebug()<<"database is open";} else {qDebug()<<"database not open";}
 }
 
 /* Методы закрытия базы данных
