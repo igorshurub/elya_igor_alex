@@ -2,6 +2,8 @@ QT -= gui
 
 QT += network #Для работы с сетью
 
+QT += core
+
 QT += sql #для базы данных
 
 QT +=widgets
