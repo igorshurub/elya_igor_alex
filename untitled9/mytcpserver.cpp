@@ -38,7 +38,8 @@ void MyTcpServer::slotNewConnection(){
         //Если переменная server_status имеет значение 1, что означает, что сервер запущен, выводим сообщение
         // "Hello, World!!! I am echo server!\r\n"
         QTcpSocket *clientSocket= mTcpServer->nextPendingConnection();
-        int idusersocs=(int)clientSocket->socketDescriptor();
+        //error
+        //int idusersocs=(int)clientSocket->socketDescriptor();
         SClients[idusersocs]=clientSocket;
         SClients[idusersocs]->write("Hello, World!!! I am echo server!");
         connect(SClients[idusersocs], &QTcpSocket::readyRead,this,&MyTcpServer::slotServerRead);
@@ -92,6 +93,15 @@ void MyTcpServer::slotServerRead(){
 
 //функция отключения клиента, если клиент отключился, выводим сообщение: "Client is disconnected \n"
 void MyTcpServer::slotClientDisconnected(){
+    QTcpSocket *clientSocket = (QTcpSocket*) sender();
+    int id =(int)clientSocket->socketDescriptor();
+    clientSocket->close();
+    SClients.remove(id);
+    qDebug() <<QString::fromUtf8("Client is closed \n");
+}
+
+//error
+void MyTcpServer::slotClientDisconnected2(){
     QTcpSocket *clientSocket = (QTcpSocket*) sender();
     int id =(int)clientSocket->socketDescriptor();
     clientSocket->close();

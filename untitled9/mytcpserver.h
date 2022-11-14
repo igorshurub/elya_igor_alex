@@ -17,10 +17,14 @@ public:
 public slots:
     void slotNewConnection(); //функция подключения клиента
     void slotClientDisconnected(); //функция отключения клиента
+    //error  
+    void slotClientDisconnected2();   
     void slotServerRead(); // функция чтения сообщения, которое пришло от клиента
 private:
     QTcpServer * mTcpServer;
     int server_status;
+    //error
+    int server;
     QMap<int,QTcpSocket *> SClients;
 };
 #endif // MYTCPSERVER_H

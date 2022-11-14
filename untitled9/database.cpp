@@ -28,8 +28,8 @@ void DataBase::closeDataBase()
 
 /*Функция запроса в БД*/
 QString DataBase::bdquery(QString temp){
-
-    QSqlQuery query(db);
+    //error
+    QSqlQuery query(database);
     query.exec(temp);
     query.next();
     if (query.value(0).toString().length() > 0)
