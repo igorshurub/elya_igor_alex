@@ -10,8 +10,8 @@
 */
 QString authorize(std::string log,std::string pass)
 {
-    QString  result;
-    Qstring password;
+    QString result;
+    QString password;
     DataBase db;
     db.openDataBase();
     if (db.bdquery("select * from authorization where login = '"+ QString::fromStdString(log) + "' AND password = '" + QString::fromStdString(pass) +"'") == "query done")
