@@ -18,7 +18,7 @@ public slots:
     void slotNewConnection(); //функция подключения клиента
     void slotClientDisconnected(); //функция отключения клиента
     //error  
-    void slotClientDisconnected2();   
+    void slotClientDisconnected();   
     void slotServerRead(); // функция чтения сообщения, которое пришло от клиента
 private:
     QTcpServer * mTcpServer;
