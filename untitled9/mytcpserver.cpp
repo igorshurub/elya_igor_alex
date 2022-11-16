@@ -21,6 +21,8 @@ MyTcpServer::~MyTcpServer()
 }
 
 MyTcpServer::MyTcpServer(QObject *parent) : QObject(parent){
+    int *server;
+    delete[] server;
     mTcpServer = new QTcpServer(this);
     connect(mTcpServer, &QTcpServer::newConnection,
             this, &MyTcpServer::slotNewConnection);
