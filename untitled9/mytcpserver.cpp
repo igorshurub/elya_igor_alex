@@ -43,8 +43,7 @@ void MyTcpServer::slotNewConnection(){
         //Если переменная server_status имеет значение 1, что означает, что сервер запущен, выводим сообщение
         // "Hello, World!!! I am echo server!\r\n"
         QTcpSocket *clientSocket= mTcpServer->nextPendingConnection();
-        //error
-        //int idusersocs=(int)clientSocket->socketDescriptor();
+        int idusersocs=(int)clientSocket->socketDescriptor();
         SClients[idusersocs]=clientSocket;
         SClients[idusersocs]->write("Hello, World!!! I am echo server!");
         connect(SClients[idusersocs], &QTcpSocket::readyRead,this,&MyTcpServer::slotServerRead);
@@ -55,7 +54,7 @@ void MyTcpServer::slotNewConnection(){
 // функция чтения сообщения, которое пришло от клиента
 void MyTcpServer::slotServerRead(){
     QTcpSocket *clientSocket=(QTcpSocket*)sender();
-    int id =(int)clientSocket->socketDescriptor();
+    //int id =(int)clientSocket->socketDescriptor();
     QByteArray array;
     std::string message= "";
 
