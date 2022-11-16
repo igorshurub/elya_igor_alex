@@ -104,10 +104,10 @@ void MyTcpServer::slotClientDisconnected(){
 }
 
 //error
-void MyTcpServer::slotClientDisconnected(){
-    QTcpSocket *clientSocket = (QTcpSocket*) sender();
-    int id =(int)clientSocket->socketDescriptor();
-    clientSocket->close();
-    SClients.remove(id);
-    qDebug() <<QString::fromUtf8("Client is closed \n");
-}
+//void MyTcpServer::slotClientDisconnected(){
+//    QTcpSocket *clientSocket = (QTcpSocket*) sender();
+//    int id =(int)clientSocket->socketDescriptor();
+//    clientSocket->close();
+//    SClients.remove(id);
+//    qDebug() <<QString::fromUtf8("Client is closed \n");
+//}
