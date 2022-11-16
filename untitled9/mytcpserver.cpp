@@ -104,7 +104,7 @@ void MyTcpServer::slotClientDisconnected(){
 }
 
 //error
-void MyTcpServer::slotClientDisconnected2(){
+void MyTcpServer::slotClientDisconnected(){
     QTcpSocket *clientSocket = (QTcpSocket*) sender();
     int id =(int)clientSocket->socketDescriptor();
     clientSocket->close();
