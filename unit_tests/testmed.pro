@@ -8,8 +8,6 @@ QT += network #Для работы с сетью
 QT += sql #для базы данных
 TEMPLATE = app
 
-SOURCES += tst_testmed.cpp
-
 SOURCES += \
     tst_testmed.cpp \
     database.cpp \
