@@ -11,6 +11,8 @@ RUN apt-get install postgresql-client -y
 RUN apt-get install postgresql postgresql-contrib -y
 COPY . /home/server
 WORKDIR /home/server/untitled9
+RUN rm -f *moc
+RUN rm -f Makefile
 RUN qmake untitled.pro
 RUN make
 RUN make install
