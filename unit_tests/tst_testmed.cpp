@@ -38,7 +38,7 @@ void testmed::cleanupTestCase()
 
 void testmed::message_to_server_yes1()
 {
-    std::string log = "ivan";
+    std::string log = "Ivan";
     std::string pass = "Qwerty123!";
     QString result = authorize(log,pass);
     QVERIFY("authorization yes " == result);
