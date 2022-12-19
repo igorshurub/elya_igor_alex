@@ -8,7 +8,7 @@ QT +=widgets
 
 #INCLUDEPATH += C:/PostgreSQL/13/lib
 #INCLUDEPATH += C:/PostgreSQL/13/bin
-INCLUDEPATH += /usr/include/postgresql
+INCLUDEPATH += /usr/include/postgresq
 
 CONFIG += c++11 console
 CONFIG -= app_bundle
