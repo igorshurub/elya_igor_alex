@@ -4,8 +4,10 @@ QT -= gui
 CONFIG += qt console warn_on depend_includepath testcase
 CONFIG -= app_bundle
 QT += network #Для работы с сетью
-
 QT += sql #для базы данных
+
+INCLUDEPATH += /usr/include/postgresql
+
 TEMPLATE = app
 
 SOURCES += \
