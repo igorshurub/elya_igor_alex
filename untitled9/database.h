@@ -11,7 +11,7 @@
 #include <QDebug>
 
 /* Директивы имен таблицы, полей таблицы и базы данных */
-#define HOSTNAME            "192.168.31.4"
+#define HOSTNAME            "192.168.31.23"
 #define DATABASE_NAME       "photolife"
 #define USER                "postgres"
 #define PASSWORD            "12345678"
