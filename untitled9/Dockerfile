@@ -11,7 +11,7 @@ COPY . /home/untitled9
 WORKDIR /home/untitled9
 RUN rm -f *moc
 RUN rm -f Makefile
-RUN qmake untitled9.pro
+RUN qmake untitled.pro
 RUN make
 RUN make install
-CMD ["./untitled9"]
+CMD ["./untitled"]
