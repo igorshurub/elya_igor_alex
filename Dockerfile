@@ -7,7 +7,7 @@ RUN apt install qtbase5-dev -y
 RUN apt install libqt5sql5-psql -y
 RUN apt install build-essential -y
 RUN apt-get install postgresql -y
-COPY /untitled9 /home/server
+COPY ./untitled9 /home/server
 WORKDIR /home/server/untitled9
 RUN rm -f *moc
 RUN rm -f Makefile
