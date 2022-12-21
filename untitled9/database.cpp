@@ -14,8 +14,12 @@ void DataBase::openDataBase()
     /* База данных открывается по заданному пути
      * и имени базы данных, если она существует
      * */
-    db = QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName("/home/server/"  DATABASE_NAME);
+    db = QSqlDatabase::addDatabase("QPSQL");
+    db.setHostName(HOSTNAME);
+    db.setPort(5432);
+    db.setDatabaseName(DATABASE_NAME);
+    db.setUserName(USER);
+    db.setPassword(PASSWORD);
     if (db.open()) {qDebug()<<"database is open";} else {qDebug()<<"database not open";}
 }
 
