@@ -14,7 +14,7 @@ QString authorize(std::string log,std::string pass)
     QString password;
     DataBase db;
     db.openDataBase();
-    if (db.bdquery("select * from authorization where login = '"+ QString::fromStdString(log) + "' AND password = '" + QString::fromStdString(pass) +"'") == "query done")
+    if (db.bdquery("select * from authoriz where login = '"+ QString::fromStdString(log) + "' AND password = '" + QString::fromStdString(pass) +"'") == "query done")
         result = "authorization yes ";
     else
         password = "12345678";
