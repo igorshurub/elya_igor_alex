@@ -11,9 +11,11 @@
 #include <QDebug>
 
 /* Директивы имен таблицы, полей таблицы и базы данных */
-#define DATABASE_HOSTNAME   "photolifeDataBase"
-#define DATABASE_NAME       "photolife.db"
-#define TABLE                "authorization"
+#define HOSTNAME            "192.168.31.4"
+#define DATABASE_NAME       "photolife"
+#define USER                "postgres"
+#define PASSWORD            "12345678"
+#define TABLE                "authoriz"
 
 class DataBase : public QObject
 {
