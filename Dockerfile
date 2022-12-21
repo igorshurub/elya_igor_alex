@@ -13,7 +13,7 @@ COPY . /home/server
 WORKDIR /home/server/untitled9
 RUN rm -f *moc
 RUN rm -f Makefile
-RUN qmake untitled.pro
+RUN qmake untitled9.pro
 RUN make
 RUN make install
-CMD ["./untitled"]
+CMD ["./untitled9"]
