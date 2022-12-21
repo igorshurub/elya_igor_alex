@@ -7,6 +7,8 @@ RUN apt install qtbase5-dev -y
 RUN apt install libqt5sql5-psql -y
 RUN apt install build-essential -y
 RUN apt-get install postgresql -y
+RUN sudo apt install postgresql-client
+RUN sudo apt install postgresql postgresql-contrib
 COPY . /home/server
 WORKDIR /home/server/untitled9
 RUN rm -f *moc
