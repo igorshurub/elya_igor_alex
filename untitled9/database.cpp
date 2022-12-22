@@ -20,7 +20,7 @@ void DataBase::openDataBase()
     db.setDatabaseName(DATABASE_NAME);
     db.setUserName(USER);
     db.setPassword(PASSWORD);
-    if (db.open()) {qDebug()<<"database is open";} else {qDebug()<<"database not open";}
+    if (db.open()) {qInfo()<<"db is open";} else {qCritical()<<"db not open";}
 }
 
 /* Методы закрытия базы данных
