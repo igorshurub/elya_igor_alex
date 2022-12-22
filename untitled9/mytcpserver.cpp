@@ -7,6 +7,7 @@
 
 MyTcpServer::~MyTcpServer()
 {
+
     foreach(int i, SClients.keys())
     {
       QTextStream os (SClients[i]);
@@ -25,10 +26,10 @@ MyTcpServer::MyTcpServer(QObject *parent) : QObject(parent){
 // а если открылся выводим сообщение "server is started"
 // и присваиваем переменной  server_status значение 1
     if(!mTcpServer->listen(QHostAddress::Any, 33333)){
-        qDebug() << "server is not run";
+        qWarning() << "server is not started";
     } else {
         server_status=1;
-        qDebug() << "server is run";
+        qInfo() << "server is started";
     }
 }
 
@@ -63,7 +64,7 @@ void MyTcpServer::slotServerRead(){
     std::string log = "";
     std::string pass = "";
 
-    qDebug()<<QString::fromStdString(message);
+    qInfo()<<QString::fromStdString(message);
     int pos = message.find("&");
     message.erase(0,pos+1);
 
@@ -96,5 +97,5 @@ void MyTcpServer::slotClientDisconnected(){
     int id =(int)clientSocket->socketDescriptor();
     clientSocket->close();
     SClients.remove(id);
-    qDebug() <<QString::fromUtf8("Client is closed \n");
+    qWarning() <<QString::fromUtf8("Client is disconnected \n");
 }
