@@ -25,10 +25,10 @@ MyTcpServer::MyTcpServer(QObject *parent) : QObject(parent){
 // а если открылся выводим сообщение "server is started"
 // и присваиваем переменной  server_status значение 1
     if(!mTcpServer->listen(QHostAddress::Any, 33333)){
-        qDebug() << "server is not started";
+        qWarning() << "server is not started";
     } else {
         server_status=1;
-        qDebug() << "server is started";
+        qInfo() << "server is started";
     }
 }
 
@@ -96,5 +96,5 @@ void MyTcpServer::slotClientDisconnected(){
     int id =(int)clientSocket->socketDescriptor();
     clientSocket->close();
     SClients.remove(id);
-    qDebug() <<QString::fromUtf8("Client is disconnected \n");
+    qWarning() <<QString::fromUtf8("Client is disconnected \n");
 }
