@@ -8,7 +8,7 @@
 #include <QSqlDatabase>
 #include <QFile>
 #include <QDate>
-#include <QDebug>
+#include <QDebug> 
 
 /* Директивы имен таблицы, полей таблицы и базы данных */
 #define HOSTNAME            "192.168.31.4"
